@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieDB API</title>
+
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- css file link -->
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body id="body">
+    <!-- search page -->
+    <section id="search-page">
+        <h2 id="logo">Movie App</h2>
+        <div>
+            <p id="search-box">Search Your Movies</p>
+            <form action="" id="form">
+                <input type="text" id="search" placeholder="i.e. avengers">
+                <button type="button" id="btn" onclick={handleEvents()}>Search</button>
+            </form>
+        </div>
+    </section>
+    <!-- end of search page -->
+
+    <!-- result page -->
+    <section id="search-result">
+        <div id="movie-name">
+            <button type="button" id="back-icon" onclick={handleBack()}>
+                <i class="fa fa-arrow-left"></i>
+            </button>
+            <h2 id="search-title">Movie Title</h2>
+        </div>
+        <div id="results">
+            
+        </div>
+    </section>
+    <!-- end of result page -->
+    
+    <!-- offline message,no result page -->
+    <section id="offline-page">
+        <div id="message-box">
+            <p id="message">You are not connected to the internet</p>
+            <button type="button" id="back" onclick={handleBack()}>Back</button>
+        </div>
+    </section>
+
+    <!-- end of offline message page -->
+
+    <!-- details page -->
+    <section id="details-page">
+        <div id="card">
+            <button id="close" onclick={handleClose()}>
+                <i class="fa fa-times"></i>
+            </button>
+            <div id="card-body">
+                <p id="card-name">Movie Name</p>
+                <img src="/avengers_poster.jpg" alt="" id="card-img">
+                <p id="card-title"><strong>Title : </strong><span id="title">Avengers</span></p>
+                <p id="card-rating"><strong>Rating : </strong><span id="rating">8.3</span></p>
+                <p id="card-language"><strong>Language : </strong><span id="language">English</span></p>
+                <p id="card-date"><strong>Release Date : </strong><span id="date">2014-04-12</span></p>
+                <p id="card-description"><strong>Description  : </strong><span id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem soluta earum architecto esse atque alias eveniet optio illum! Atque commodi similique fugit! Molestiae, quam illo.</span></p>
+            </div>
+        </div>
+    </section>
+    <!-- end of details page -->
+
+    <!-- js file source -->
+    <script src="./api.js"></script>
+    <script src="/index.js"></script>
+</body>
+</html>

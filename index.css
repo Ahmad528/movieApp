@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* search page  */
+#logo{
+    font-size: 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(133,123,123);
+    position: absolute;
+    top: 0rem;
+    left: 1rem;
+}
+#search-page{
+    background: linear-gradient(45deg, rgba(0,0,0,0.915),rgba(116,6,10,0.915)),url(./background.jpg) center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#search-box{
+    font-size: 2rem;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+#search{
+    font-size: 1.3rem;
+    padding: 0.2rem 0.8rem;
+    border-radius: 1.5rem;
+    background: gainsboro;
+    outline: none;
+    border: none;
+}
+#search:focus{
+    background: rgb(212,237,245);
+}
+#btn{
+    font-size: 1.3rem;
+    padding: 0.2rem 1rem;
+    border-radius: 1.5rem;
+    outline: none;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+#btn:active{
+    background: white;
+    color: black;
+}
+/* end of search page */
+
+/* result page */
+#search-result{
+    display: none;
+}
+#movie-name{
+    background: black;
+    color: white;
+    font-size: larger;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    font-family: sans-serif;
+}
+#search-title{
+    text-transform: capitalize;
+}
+#back-icon{
+    margin-right: 1rem;
+    background: white;
+    outline: none;
+    border: none;
+    padding: 0 0.7rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+#search-result #results{
+    position: relative;
+    top: 5rem;
+    margin: 0 7rem;
+    font-family: sans-serif;
+}
+#results div{
+    width: 15rem;
+    position: relative;
+    display: inline-block;
+    margin: 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+#search-result img{
+    width: 15rem;
+    height: 17rem;
+    margin: 0;
+    padding: 0;
+    border-radius: 1rem 1rem 0 0;
+}
+#search-result p{
+    background: gainsboro;
+    margin-top: -0.3rem;
+    padding: 0.3rem 0.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 0 0 1rem 1rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+/* end of result page */
+
+/* offline message page */
+#offline-page{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(226,226,226);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+#message-box{
+    width: 20rem;
+    padding: 2rem;
+    font-size: 1.5rem;
+    background: white;
+    text-align: center;
+}
+#back{
+    font-size: 1.3rem;
+    padding: 0.2rem 1rem;
+    border-radius: 1rem;
+    outline: none;
+    border: none;
+    background: black;
+    color: white;
+    margin-top: 3rem;
+    cursor: pointer;
+}
+#back:active{
+    background: white;
+    color: black;
+}
+/* end of offline message page */
+
+/* details page */
+#details-page{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(128,128,128,0.71);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+#card{
+    width: 40rem;
+    height: 31rem;
+    position: relative;
+    background: white;
+    font-family: sans-serif;
+}
+#card-body{
+    overflow: auto;
+    width: 40rem;
+    height: 27rem;
+    padding: 0 4.4rem;
+    position: relative;
+    top: 2rem;
+    margin: auto;
+}
+#card-name{
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 0.3rem 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#card-img{
+    width: 30rem;
+    height: 18rem;
+    margin: 0.5rem 0;
+}
+#card-title,#card-rating,#card-language,#card-description,#card-date{
+    margin: 0.5rem 0;
+}
+#close{
+    position: absolute;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    right: 0;
+    background: 0;
+    color: grey;
+    padding: 0.2rem 0.4rem;
+}
+#close:active{
+    background: grey;
+    color: white;
+}
+/* end of details page */
+
+/* responsive view for phones and tabs */
+
+@media screen and (max-width: 800px){
+    #details-page{
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    #card{
+        width: 21rem;
+        height: 30rem;
+    }
+    #card-body{
+        width: 21rem;
+        height: 26rem;
+        padding: 0 1rem;
+        font-size: 0.8rem;
+        position: relative;
+    }
+    #card-img{
+        width: 18rem;
+        height: 13rem;
+    }
+    #card-name{
+        font-size: 1rem;
+    }
+    #message-box{
+        width: 15rem;
+        font-size: 1.2rem;
+    }
+    #search-title{
+        font-size: 1.2rem;
+    }
+    #back-icon{
+        padding: 0 0.4rem;
+    }
+    #search-box{
+        font-size: 1.1rem;
+    }
+    #search{
+        font-size: 1rem;
+        width: 12rem;
+    }
+    #btn{
+        display: block;
+        margin: auto;
+        margin-top: 1rem;
+    }
+    #search-result #results{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+    #results div{
+        margin:  1rem auto;
+    }
+}
